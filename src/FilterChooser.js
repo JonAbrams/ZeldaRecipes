@@ -1,14 +1,18 @@
 import React from 'react';
 
-function setIngredient({ state }) {
-
+function setIngredient({ state }, { target: { value: ingredient } }) {
+  return {
+    [ingredient]: !state[ingredient]
+  };
 }
 
-function setEffect({ state }) {
-
+function setEffect({ state }, { target: { value: effect } }) {
+  return {
+    [effect]: !state[effect]
+  };
 }
 
-function FilterChooser({ state, setState }) {
+function FilterChooser({ state, setState, subSpace }) {
   const ingredients = Object.keys(state.ingredients);
   const effects = Object.keys(state.effects);
 
@@ -20,7 +24,12 @@ function FilterChooser({ state, setState }) {
         <div className="filter-inputs">
           {ingredients.map(ingredient =>
             <label key={ingredient}>
-              <input type="checkbox" onClick={setState(setIngredient)} />
+              <input
+                type="checkbox"
+                value={ingredient}
+                checked={state.ingredients[ingredient]}
+                onChange={subSpace('ingredients').setState(setIngredient)}
+              />
               {ingredient}
             </label>
           )}
@@ -31,7 +40,12 @@ function FilterChooser({ state, setState }) {
         <div className="filter-inputs">
           {effects.map(effect =>
             <label key={effect}>
-              <input type="checkbox" onClick={setState(setEffect)} />
+              <input
+                type="checkbox"
+                value={effect}
+                checked={state.effects[effect]}
+                onChange={subSpace('effects').setState(setEffect)}
+              />
               {effect}
             </label>
           )}

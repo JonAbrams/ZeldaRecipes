@@ -32,4 +32,8 @@ const rootSpace = new Space({
   },
   recipes: []
 });
-ReactDOM.render(<App space={rootSpace} />, document.getElementById('root'));
+
+rootSpace.subscribe(causedBy => {
+  console.log("Change caused by", causedBy);
+  ReactDOM.render(<App space={rootSpace} />, document.getElementById('root'));
+});
