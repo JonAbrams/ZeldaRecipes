@@ -13,6 +13,7 @@ function App({ space }) {
         <RecipeList
           {...space.subSpace('recipes')}
           favourites={space.state.favouriteList.favourites}
+          filters={space.state.filters}
         />
       </div>
     </div>

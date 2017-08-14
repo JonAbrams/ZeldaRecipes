@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 function setIngredient({ state }, { target: { value: ingredient } }) {
   return {
@@ -12,13 +12,22 @@ function setEffect({ state }, { target: { value: effect } }) {
   };
 }
 
+function setSearch(space, { target: { value: search }}) {
+  return { search };
+}
+
 function FilterChooser({ state, setState, subSpace }) {
   const ingredients = Object.keys(state.ingredients);
   const effects = Object.keys(state.effects);
 
   return (
     <div className="filter-chooser">
-      <input type="search" placeholder="Filter by keyword…" />
+      <input
+        type="search"
+        placeholder="Filter by keyword…"
+        value={state.search}
+        onChange={setState(setSearch)}
+      />
       <div className="ingredients">
         <label>Ingredients:</label>
         <div className="filter-inputs">
@@ -28,7 +37,7 @@ function FilterChooser({ state, setState, subSpace }) {
                 type="checkbox"
                 value={ingredient}
                 checked={state.ingredients[ingredient]}
-                onChange={subSpace('ingredients').setState(setIngredient)}
+                onChange={subSpace("ingredients").setState(setIngredient)}
               />
               {ingredient}
             </label>
@@ -44,7 +53,7 @@ function FilterChooser({ state, setState, subSpace }) {
                 type="checkbox"
                 value={effect}
                 checked={state.effects[effect]}
-                onChange={subSpace('effects').setState(setEffect)}
+                onChange={subSpace("effects").setState(setEffect)}
               />
               {effect}
             </label>

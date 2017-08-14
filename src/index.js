@@ -4,20 +4,18 @@ import Space from 'spaceace';
 
 import './index.css';
 import App from './App';
+import { recipes, ingredients } from './data';
 
-const rootSpace = new Space({
+const initialState = {
   favouriteList: {
     favourites: [] // list of ids
   },
   filters: {
-    ingredients: {
-      Vegetables: true,
-      Mushrooms: true,
-      Meat: true,
-      Herbs: true,
-      Dairy: true,
-      'Monster Parts': true,
-    },
+    search: '',
+    ingredients: ingredients.reduce((obj, ingredient) => {
+      obj[ingredient] = true;
+      return obj;
+    }, {}),
     effects: {
       Stamina: true,
       Haste: true,
@@ -27,13 +25,15 @@ const rootSpace = new Space({
       Stealth: true,
       Strength: true,
       Defence: true,
-      'Bonus Hearts': true,
+      Hearts: true,
     }
   },
-  recipes: []
-});
+  recipes,
+};
+
+const rootSpace = new Space(initialState);
 
 rootSpace.subscribe(causedBy => {
-  console.log("Change caused by", causedBy);
+  console.log("Change caused by", causedBy, "new state", rootSpace.state);
   ReactDOM.render(<App space={rootSpace} />, document.getElementById('root'));
 });
