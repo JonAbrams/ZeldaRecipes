@@ -25,7 +25,12 @@ function RecipeList({ state: recipes, parentSpace, favourites, filters}) {
       <ul className="recipe-list">
         {filteredRecipes.map(recipe =>
           <li className="recipe" key={recipe.name}>
-            <strong>{recipe.name}</strong>
+            <div className="recipe-name">{recipe.name}</div>
+            <ul className="recipe-ingredients">
+              {Object.keys(recipe.ingredients).map(ingredient =>
+                <li>{recipe.ingredients[ingredient]} x {ingredient}</li>
+              )}
+            </ul>
           </li>
         )}
       </ul>
