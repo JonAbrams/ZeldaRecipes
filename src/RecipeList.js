@@ -1,7 +1,15 @@
 import React from 'react';
 
 function filterRecipes(recipes, filters) {
-  return recipes.filter(recipe =>
+  return recipes.filter(recipe => {
+    // Filter by search keyword
+    if (filters.search) {
+      return recipe.name.toLowerCase().includes(filters.search.toLowerCase()) ||
+        Object.keys(recipe.ingredients).some(ingredient =>
+          ingredient.toLowerCase().includes(filters.search.toLowerCase())
+        );
+    } else return true;
+  }).filter(recipe =>
     Object.keys(recipe.ingredients).every(ingredient =>
       filters.ingredients[ingredient]
     ) && (recipe.effect === null || filters.effects[recipe.effect])
@@ -9,7 +17,6 @@ function filterRecipes(recipes, filters) {
 }
 
 function RecipeList({ state: recipes, parentSpace, favourites, filters}) {
-  debugger;
   const filteredRecipes = filterRecipes(recipes, filters);
   return (
     filteredRecipes.length === 0 ?
