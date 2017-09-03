@@ -4,16 +4,15 @@ import FavouriteList from './FavouriteList';
 import FilterChooser from './FilterChooser';
 import RecipeList from './RecipeList';
 
-function App({ space }) {
+function App({ state, subSpace, setState }) {
   return (
     <div className="App">
-      <FavouriteList {...space.subSpace('favouriteList')} />
+      <FavouriteList {...subSpace('recipes')} />
       <div className="recipe-browser">
-        <FilterChooser {...space.subSpace('filters')} />
+        <FilterChooser {...subSpace('filters')} />
         <RecipeList
-          {...space.subSpace('recipes')}
-          favourites={space.state.favouriteList.favourites}
-          filters={space.state.filters}
+          {...subSpace('recipes')}
+          filters={state.filters}
         />
       </div>
     </div>

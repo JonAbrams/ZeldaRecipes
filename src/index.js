@@ -7,9 +7,7 @@ import App from './App';
 import { recipes, ingredients } from './data';
 
 const initialState = {
-  favouriteList: {
-    favourites: [] // list of ids
-  },
+  favourites: [], // list of names
   filters: {
     search: '',
     ingredients: ingredients.reduce((obj, ingredient) => {
@@ -28,12 +26,15 @@ const initialState = {
       Hearts: true,
     }
   },
-  recipes,
+  recipes: recipes.map(recipe => {
+    recipe.id = recipe.name;
+    return recipe;
+  }),
 };
 
 const rootSpace = new Space(initialState);
 
 rootSpace.subscribe(causedBy => {
   console.log("Change caused by", causedBy, "new state", rootSpace.state);
-  ReactDOM.render(<App space={rootSpace} />, document.getElementById('root'));
+  ReactDOM.render(<App {...rootSpace} />, document.getElementById('root'));
 });
