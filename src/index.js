@@ -7,37 +7,29 @@ import App from './App';
 import { recipes } from './data';
 
 const ingredients = {};
-recipes.forEach(recipe =>
+const effects = { "No Effect": true };
+recipes.forEach(recipe => {
   Object.keys(recipe.ingredients).forEach(ingredientStr =>
     ingredientStr.split('|').forEach(ingredient =>
       ingredients[ingredient] = true
     )
-  )
-);
+  );
+  if (recipe.effect) effects[recipe.effect] = true;
+});
+
 
 const initialState = {
   favourites: [], // list of names
   filters: {
     search: '',
     ingredients,
-    effects: {
-      Stamina: true,
-      Haste: true,
-      Fire: true,
-      Heat: true,
-      Cold: true,
-      Stealth: true,
-      Strength: true,
-      Defence: true,
-      Hearts: true,
-    }
+    effects,
   },
   recipes: recipes.map(recipe => {
     recipe.id = recipe.name;
     return recipe;
   }),
 };
-debugger;
 
 const rootSpace = new Space(initialState);
 

@@ -1,5 +1,10 @@
 import React from 'react';
 
+function unFavourite(space, e) {
+  e.preventDefault();
+  return { favourite: false };
+}
+
 function FavouriteList({ state: recipes, subSpace }) {
   const favRecipes = recipes.filter(r => r.favourite);
 
@@ -23,7 +28,7 @@ function FavouriteRecipe({ state: recipe, setState }) {
       <div className='recipe-name'>{recipe.name}</div>
       <button
         className='recipe-remove'
-        onClick={setState(() => ({ favourite: false }))}
+        onClick={setState(unFavourite)}
       >
         &times;
       </button>

@@ -13,7 +13,10 @@ function filterRecipes(recipes, filters) {
   }).filter(recipe => {
     return Object.keys(recipe.ingredients).every(ingredient =>
       ingredient.split('|').some(ingredient => filters.ingredients[ingredient])
-    ) && (recipe.effect === null || filters.effects[recipe.effect])
+    ) && (
+      (recipe.effect === null && filters.effects['No Effect']) ||
+        filters.effects[recipe.effect]
+    );
   });
 }
 

@@ -7,6 +7,7 @@ import RecipeList from './RecipeList';
 function App({ state, subSpace, setState }) {
   return (
     <div className="App">
+      <h1>Zelda: Breath of the Wild – Recipe Browser</h1>
       <FavouriteList {...subSpace('recipes')} />
       <div className="recipe-browser">
         <FilterChooser {...subSpace('filters')} />

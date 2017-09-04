@@ -155,7 +155,7 @@ export const recipes = [
   {
     name: "Vegetable Curry",
     ingredients: {
-      "Carrot|Pumpkin": 1,
+      "Carrots|Pumpkins": 1,
       "Goron Spice": 1,
       "Hylian Rice": 1
     },
