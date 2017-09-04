@@ -12,7 +12,7 @@ function filterRecipes(recipes, filters) {
     } else return true;
   }).filter(recipe => {
     return Object.keys(recipe.ingredients).every(ingredient =>
-      filters.ingredients[ingredient]
+      ingredient.split('|').some(ingredient => filters.ingredients[ingredient])
     ) && (recipe.effect === null || filters.effects[recipe.effect])
   });
 }

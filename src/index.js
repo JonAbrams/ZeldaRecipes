@@ -4,16 +4,22 @@ import Space from 'spaceace';
 
 import './index.css';
 import App from './App';
-import { recipes, ingredients } from './data';
+import { recipes } from './data';
+
+const ingredients = {};
+recipes.forEach(recipe =>
+  Object.keys(recipe.ingredients).forEach(ingredientStr =>
+    ingredientStr.split('|').forEach(ingredient =>
+      ingredients[ingredient] = true
+    )
+  )
+);
 
 const initialState = {
   favourites: [], // list of names
   filters: {
     search: '',
-    ingredients: ingredients.reduce((obj, ingredient) => {
-      obj[ingredient] = true;
-      return obj;
-    }, {}),
+    ingredients,
     effects: {
       Stamina: true,
       Haste: true,
@@ -31,6 +37,7 @@ const initialState = {
     return recipe;
   }),
 };
+debugger;
 
 const rootSpace = new Space(initialState);
 
