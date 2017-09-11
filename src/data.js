@@ -15,7 +15,7 @@ export const recipes = [
       "Pumpkins": 1,
       "Goat Butter": 1,
       "Fresh Milk": 1,
-      "Tabantha Wheat": 1
+      "Wheat": 1
     },
     effect: "Defence"
   },
@@ -67,7 +67,7 @@ export const recipes = [
       "Carrots": 1,
       "Goat Butter": 1,
       "Fresh Milk": 1,
-      "Tabantha Wheat": 1
+      "Wheat": 1
     },
     effect: "Stamina"
   },

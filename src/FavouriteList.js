@@ -10,14 +10,17 @@ function FavouriteList({ state: recipes, subSpace }) {
 
   return (
     <div className='favourite-list'>
-      <ul className='favourite-recipes'>
-        {favRecipes.map(recipe =>
-          <FavouriteRecipe
-            key={recipe.name}
-            {...subSpace(recipe.id)}
-          />
-        )}
-      </ul>
+      {favRecipes.length ?
+        <ul className='favourite-recipes'>
+          {favRecipes.map(recipe =>
+            <FavouriteRecipe
+              key={recipe.name}
+              {...subSpace(recipe.id)}
+            />
+          )}
+        </ul>
+        : <div>You haven't favourited any recipes.</div>
+      }
     </div>
   );
 }

@@ -45,21 +45,24 @@ function FilterChooser({ state, setState, subSpace }) {
   return (
     <div className="filter-chooser">
       <input
-        type="search"
+        className="filter-search"
+        type="text"
         placeholder="Filter by keyword…"
         value={state.search}
         onChange={setState(setSearch)}
       />
       <div className="ingredients">
-        <label>Ingredients:</label>
-        <div className="select-deselect-container">
-          <a onClick={subSpace('ingredients').setState(selectAll)} href="#">Select All</a>
-          |
-          <a onClick={subSpace('ingredients').setState(deselectAll)} href="#">Deselect All</a>
+        <div className="filter-label-section">
+          <label>Ingredients</label>
+          <div className="select-deselect-container">
+            <button onClick={subSpace('ingredients').setState(selectAll)} href="#">Select All</button>
+            |
+            <button onClick={subSpace('ingredients').setState(deselectAll)} href="#">Deselect All</button>
+          </div>
         </div>
         <div className="filter-inputs">
           {ingredients.map(ingredient =>
-            <label key={ingredient}>
+            <label className="filter-option" key={ingredient}>
               <input
                 type="checkbox"
                 value={ingredient}
@@ -72,15 +75,17 @@ function FilterChooser({ state, setState, subSpace }) {
         </div>
       </div>
       <div className="effects">
-        <label>Effects:</label>
-        <div className="select-deselect-container">
-          <a onClick={subSpace('effects').setState(selectAll)} href="#">Select All</a>
-          |
-          <a onClick={subSpace('effects').setState(deselectAll)} href="#">Deselect All</a>
+        <div className="filter-label-section">
+          <label>Effects</label>
+          <div className="select-deselect-container">
+            <button onClick={subSpace('effects').setState(selectAll)} href="#">Select All</button>
+            |
+            <button onClick={subSpace('effects').setState(deselectAll)} href="#">Deselect All</button>
+          </div>
         </div>
         <div className="filter-inputs">
           {effects.map(effect =>
-            <label key={effect}>
+            <label className="filter-option" key={effect}>
               <input
                 type="checkbox"
                 value={effect}

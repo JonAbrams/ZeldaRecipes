@@ -1,0 +1,65 @@
+.App {
+  max-width: 768px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+
+.app-wrapper {
+  display: flex;
+}
+
+.favourite-list {
+  width: 200px;
+  margin-right: 20px;
+}
+
+.favourite-recipes {
+  list-style: none;
+  padding-left: 0;
+}
+
+.favourite-recipes li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.recipe-remove {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.recipe-browser {
+  margin-top: 15px;
+}
+
+.filter-search {
+  width: 100%;
+  padding: 8px;
+  border-radius: 10px;
+  outline: none;
+  border: solid 1px;
+  border-color: #c0c0c0;
+}
+
+.filter-search:focus {
+  border-color: #0f0f0f;
+}
+
+.filter-label-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+.filter-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.filter-option {
+  width: 120px;
+}
