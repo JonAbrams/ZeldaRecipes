@@ -22,6 +22,7 @@ const initialState = {
   favourites: [], // list of names
   filters: {
     search: '',
+    favouritesOnly: false,
     ingredients,
     effects,
   },

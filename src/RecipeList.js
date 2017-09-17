@@ -11,13 +11,17 @@ function filterRecipes(recipes, filters) {
         );
     } else return true;
   }).filter(recipe => {
+    // Filter by ingredients and effects
     return Object.keys(recipe.ingredients).every(ingredient =>
       ingredient.split('|').some(ingredient => filters.ingredients[ingredient])
     ) && (
       (recipe.effect === null && filters.effects['No Effect']) ||
         filters.effects[recipe.effect]
     );
-  });
+  }).filter(recipe =>
+    // Filter by favourites
+    filters.favouritesOnly ? recipe.favourite : true
+  );
 }
 
 function RecipeList({ state: recipes, subSpace, filters}) {

@@ -63,3 +63,16 @@
 .filter-option {
   width: 120px;
 }
+
+.select-separator {
+  margin: 0 5px;
+}
+
+.filter-favourite {
+  display: block;
+  margin-top: 10px;
+}
+
+.no-recipes, .recipe-list {
+  margin-top: 10px;
+}
