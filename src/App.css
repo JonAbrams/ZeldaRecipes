@@ -76,3 +76,7 @@
 .no-recipes, .recipe-list {
   margin-top: 10px;
 }
+
+.recipe-effect {
+  margin: 0 5px;
+}

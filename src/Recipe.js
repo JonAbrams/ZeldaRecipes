@@ -28,6 +28,9 @@ function Recipe({ state: recipe, setState }) {
     <div className="recipe">
       <div className="recipe-name">
         {recipe.name}
+        {recipe.effect &&
+          <span className="recipe-effect">(+ {recipe.effect})</span>
+        }
         <button
           onClick={setState(toggleFavourite)}
           title={'Click to ' + favouriteText}

@@ -12,7 +12,7 @@ function filterRecipes(recipes, filters) {
     } else return true;
   }).filter(recipe => {
     // Filter by ingredients and effects
-    return Object.keys(recipe.ingredients).every(ingredient =>
+    return Object.keys(recipe.ingredients).some(ingredient =>
       ingredient.split('|').some(ingredient => filters.ingredients[ingredient])
     ) && (
       (recipe.effect === null && filters.effects['No Effect']) ||
