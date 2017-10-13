@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 function toggleFavourite({ state: recipe }) {
   return {
@@ -7,7 +7,7 @@ function toggleFavourite({ state: recipe }) {
 }
 
 function renderIngredient(ingredient) {
-  const ingredients = ingredient.split('|');
+  const ingredients = ingredient.split("|");
   const len = ingredients.length;
 
   if (len === 1) {
@@ -15,35 +15,35 @@ function renderIngredient(ingredient) {
   } else if (len === 2) {
     return `${ingredients[0]} or ${ingredients[1]}`;
   } else {
-    return `${ingredients.slice(0, -1).join(', ')}, or ${ingredients[len - 1]}`;
+    return `${ingredients.slice(0, -1).join(", ")}, or ${ingredients[len - 1]}`;
   }
 }
 
 function Recipe({ state: recipe, setState }) {
-  const favouriteText = recipe.favourite ?
-    'remove from favourites'
-    : 'add to favourites';
+  const favouriteText = recipe.favourite
+    ? "remove from favourites"
+    : "add to favourites";
 
   return (
     <div className="recipe">
       <div className="recipe-name">
         {recipe.name}
-        {recipe.effect &&
+        {recipe.effect && (
           <span className="recipe-effect">(+ {recipe.effect})</span>
-        }
+        )}
         <button
           onClick={setState(toggleFavourite)}
-          title={'Click to ' + favouriteText}
+          title={"Click to " + favouriteText}
         >
-          {recipe.favourite ? '★' : '☆'}
+          {recipe.favourite ? "★" : "☆"}
         </button>
       </div>
       <ul className="recipe-ingredients">
-        {Object.keys(recipe.ingredients).map(ingredient =>
+        {Object.keys(recipe.ingredients).map(ingredient => (
           <li key={ingredient}>
             {recipe.ingredients[ingredient]} x {renderIngredient(ingredient)}
           </li>
-        )}
+        ))}
       </ul>
     </div>
   );

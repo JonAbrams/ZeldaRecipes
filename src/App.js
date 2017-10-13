@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
-import FavouriteList from './FavouriteList';
-import FilterChooser from './FilterChooser';
-import RecipeList from './RecipeList';
+import FavouriteList from "./FavouriteList";
+import FilterChooser from "./FilterChooser";
+import RecipeList from "./RecipeList";
 
-import './App.css';
+import "./App.css";
 
 function App({ state, subSpace, setState }) {
   return (
@@ -13,14 +13,11 @@ function App({ state, subSpace, setState }) {
       <div className="app-wrapper">
         <div className="favourite-list">
           <h3>Favourite Recipes</h3>
-          <FavouriteList {...subSpace('recipes')} />
+          <FavouriteList {...subSpace("recipes")} />
         </div>
         <div className="recipe-browser">
-          <FilterChooser {...subSpace('filters')} />
-          <RecipeList
-            {...subSpace('recipes')}
-            filters={state.filters}
-          />
+          <FilterChooser {...subSpace("filters")} />
+          <RecipeList {...subSpace("recipes")} filters={state.filters} />
         </div>
       </div>
     </div>

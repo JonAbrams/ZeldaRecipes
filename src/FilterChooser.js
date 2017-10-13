@@ -12,7 +12,7 @@ function setEffect({ state }, { target: { name: effect } }) {
   };
 }
 
-function setSearch(space, { target: { value: search }}) {
+function setSearch(space, { target: { value: search } }) {
   return { search };
 }
 
@@ -20,9 +20,7 @@ function selectAll({ state }, e) {
   e.preventDefault();
 
   const selected = {};
-  Object.keys(state).forEach(item =>
-    selected[item] = true
-  );
+  Object.keys(state).forEach(item => (selected[item] = true));
 
   return selected;
 }
@@ -31,9 +29,7 @@ function deselectAll({ state }, e) {
   e.preventDefault();
 
   const deselected = {};
-  Object.keys(state).forEach(item =>
-    deselected[item] = false
-  );
+  Object.keys(state).forEach(item => (deselected[item] = false));
 
   return deselected;
 }
@@ -61,13 +57,23 @@ function FilterChooser({ state, setState, subSpace }) {
         <div className="filter-label-section">
           <label>Ingredients</label>
           <div className="select-deselect-container">
-            <button onClick={subSpace('ingredients').setState(selectAll)} href="#">Select All</button>
+            <button
+              onClick={subSpace("ingredients").setState(selectAll)}
+              href="#"
+            >
+              Select All
+            </button>
             <span className="select-separator">–</span>
-            <button onClick={subSpace('ingredients').setState(deselectAll)} href="#">Deselect All</button>
+            <button
+              onClick={subSpace("ingredients").setState(deselectAll)}
+              href="#"
+            >
+              Deselect All
+            </button>
           </div>
         </div>
         <div className="filter-inputs">
-          {ingredients.map(ingredient =>
+          {ingredients.map(ingredient => (
             <label className="filter-option" key={ingredient}>
               <input
                 type="checkbox"
@@ -77,20 +83,27 @@ function FilterChooser({ state, setState, subSpace }) {
               />
               {ingredient}
             </label>
-          )}
+          ))}
         </div>
       </div>
       <div className="effects">
         <div className="filter-label-section">
           <label>Effects</label>
           <div className="select-deselect-container">
-            <button onClick={subSpace('effects').setState(selectAll)} href="#">Select All</button>
+            <button onClick={subSpace("effects").setState(selectAll)} href="#">
+              Select All
+            </button>
             <span className="select-separator">–</span>
-            <button onClick={subSpace('effects').setState(deselectAll)} href="#">Deselect All</button>
+            <button
+              onClick={subSpace("effects").setState(deselectAll)}
+              href="#"
+            >
+              Deselect All
+            </button>
           </div>
         </div>
         <div className="filter-inputs">
-          {effects.map(effect =>
+          {effects.map(effect => (
             <label className="filter-option" key={effect}>
               <input
                 type="checkbox"
@@ -100,7 +113,7 @@ function FilterChooser({ state, setState, subSpace }) {
               />
               {effect}
             </label>
-          )}
+          ))}
         </div>
       </div>
       <label className="filter-favourite">
