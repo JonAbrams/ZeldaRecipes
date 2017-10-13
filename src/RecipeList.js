@@ -33,11 +33,16 @@ function filterRecipes(recipes, filters) {
     );
 }
 
-function RecipeList({ state: recipes, subSpace, filters }) {
+function RecipeList({ state: recipes, subSpace, filters, resetFilters }) {
   const filteredRecipes = filterRecipes(recipes, filters);
 
   return filteredRecipes.length === 0 ? (
-    <div className="no-recipes">No recipes match your search</div>
+    <div className="no-recipes">
+      No recipes match your search
+      <button className="reset-filters" onClick={resetFilters}>
+        Reset Filters
+      </button>
+    </div>
   ) : (
     <ul className="recipe-list">
       {filteredRecipes.map(recipe => (

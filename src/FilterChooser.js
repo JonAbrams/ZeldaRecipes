@@ -16,8 +16,8 @@ function setSearch(space, { target: { value: search } }) {
   return { search };
 }
 
-function selectAll({ state }, e) {
-  e.preventDefault();
+function selectAll({ state }, event) {
+  event.preventDefault();
 
   const selected = {};
   Object.keys(state).forEach(item => (selected[item] = true));
@@ -25,8 +25,8 @@ function selectAll({ state }, e) {
   return selected;
 }
 
-function deselectAll({ state }, e) {
-  e.preventDefault();
+function deselectAll({ state }, event) {
+  event.preventDefault();
 
   const deselected = {};
   Object.keys(state).forEach(item => (deselected[item] = false));

@@ -1,7 +1,7 @@
 import React from "react";
 
-function unFavourite(space, e) {
-  e.preventDefault();
+function unFavourite(space, event) {
+  event.preventDefault();
   return { favourite: false };
 }
 

@@ -422,21 +422,5 @@ export const recipes = [
       Fish: 1
     },
     effect: null
-  },
-  {
-    name: "Crab Stir-Fry",
-    ingredients: {
-      Crab: 1,
-      "Goron Spice": 1
-    },
-    effect: "Attack"
-  },
-  {
-    name: "Crab Stir-Fry",
-    ingredients: {
-      Crab: 1,
-      "Goron Spice": 1
-    },
-    effect: "Attack"
   }
 ];

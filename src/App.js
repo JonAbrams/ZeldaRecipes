@@ -3,8 +3,17 @@ import React from "react";
 import FavouriteList from "./FavouriteList";
 import FilterChooser from "./FilterChooser";
 import RecipeList from "./RecipeList";
+import { getInitialState } from "./initialState";
 
 import "./App.css";
+
+function resetFilters(space, event) {
+  event.preventDefault();
+
+  return {
+    filters: getInitialState().filters
+  };
+}
 
 function App({ state, subSpace, setState }) {
   return (
@@ -17,7 +26,11 @@ function App({ state, subSpace, setState }) {
         </div>
         <div className="recipe-browser">
           <FilterChooser {...subSpace("filters")} />
-          <RecipeList {...subSpace("recipes")} filters={state.filters} />
+          <RecipeList
+            {...subSpace("recipes")}
+            filters={state.filters}
+            resetFilters={setState(resetFilters)}
+          />
         </div>
       </div>
     </div>
