@@ -33,6 +33,12 @@ function App({ state, subSpace, setState }) {
           />
         </div>
       </div>
+      <div className="footer">
+        Created by <a href="https://twitter.com/JonathanAbrams">
+          Jon Abrams
+        </a>{" "}
+        to demo <a href="https://github.com/JonAbrams/spaceace">Space Ace</a>
+      </div>
     </div>
   );
 }
