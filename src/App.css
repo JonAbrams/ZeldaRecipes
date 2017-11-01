@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "triforce";
+  src: url("fonts/Triforce.ttf") format("truetype"),
+    url("fonts/Triforce.woff") format("woff");
+}
+
 .App {
   max-width: 768px;
   margin: 0 auto;
@@ -5,8 +11,13 @@
   padding: 0 10px;
 }
 
+h1, h3, h4, button{
+  font-family: "triforce", Arial, Helvetica, sans-serif;
+}
+
 .app-wrapper {
   display: flex;
+  font-family: 'Open Sans Condensed', sans-serif;
 }
 
 .favourite-list {
