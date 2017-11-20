@@ -37,6 +37,7 @@ function Recipe({ state: recipe, setState }) {
         >
           {recipe.favourite ? "★" : "☆"}
         </button>
+        <img src={recipe.imagePath} />
       </div>
       <ul className="recipe-ingredients">
         {Object.keys(recipe.ingredients).map(ingredient => (
