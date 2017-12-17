@@ -84,13 +84,30 @@ h1, h3, h4, button{
   margin-top: 10px;
 }
 
+.favourite-button {
+  border: none;
+}
+
 .no-recipes,
 .recipe-list {
   margin-top: 10px;
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 5px;
+  grid-row-gap: 10px;
+  padding: 0;
+}
+
+.recipe-list-item {
+  display: block
 }
 
 .recipe-effect {
   margin: 0 5px;
+}
+
+.recipe-ingredients {
+  padding-left: 20px;
 }
 
 .reset-filters {
