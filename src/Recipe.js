@@ -27,6 +27,7 @@ function Recipe({ state: recipe, setState }) {
   return (
     <div className="recipe">
       <div className="recipe-name">
+        <img className="recipe-img" src={recipe.imagePath} />
         <div className="recipe-head">
           <button className="favourite-button"
             onClick={setState(toggleFavourite)}
@@ -34,17 +35,18 @@ function Recipe({ state: recipe, setState }) {
           >
             {recipe.favourite ? "★" : "☆"}
           </button>
+          {recipe.effect && (
+            <div className="recipe-effect">(+ {recipe.effect})</div>
+          )}
           {recipe.name}
         </div>
-        {recipe.effect && (
-          <div className="recipe-effect">(+ {recipe.effect})</div>
-        )}
-        <img src={recipe.imagePath} />
+
+
       </div>
       <ul className="recipe-ingredients">
         {Object.keys(recipe.ingredients).map(ingredient => (
           <li className="recipe-ingredient" key={ingredient}>
-            {recipe.ingredients[ingredient]} x {renderIngredient(ingredient)}
+            {recipe.ingredients[ingredient]}  {renderIngredient(ingredient)}
           </li>
         ))}
       </ul>

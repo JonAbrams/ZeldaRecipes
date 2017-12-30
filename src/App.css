@@ -4,9 +4,11 @@
     url("fonts/Triforce.woff") format("woff");
 }
 
-.App {
+#root {
+  margin: auto;
   max-width: 768px;
-  margin: 0 auto;
+}
+.App {
   box-sizing: border-box;
   padding: 0 10px;
   display: inline-grid;
@@ -18,8 +20,8 @@ h1, h3, h4, button{
   font-family: "triforce", Arial, Helvetica, sans-serif;
 }
 
-.app-wrapper {
 
+.app-wrapper {
   font-family: 'Open Sans Condensed', sans-serif;
 }
 
@@ -34,7 +36,7 @@ h1, h3, h4, button{
 }
 
 .favourite-recipes li {
-
+  
 }
 
 .recipe-remove {
@@ -56,6 +58,7 @@ h1, h3, h4, button{
 .filter-search {
   width: 100%;
   padding: 8px;
+  font-size: 16px;
   border-radius: 10px;
   outline: none;
   border: solid 1px;
@@ -83,6 +86,7 @@ h1, h3, h4, button{
 .filter-inputs {
   display: inline-grid;
   grid-template-columns: 1fr 1fr 1fr;
+  font-size: 12px;
 }
 
 .filter-option {
@@ -101,6 +105,34 @@ h1, h3, h4, button{
 
 .favourite-button {
   border: none;
+  width: 44px;
+  height: 44px;
+  font-size: 25px;
+  position: absolute;
+  top: 98px;
+  opacity: 0.4;
+}
+
+.favourite-button:hover {
+  cursor: pointer;
+}
+
+.recipe-img {
+  width: 100%;
+}
+
+.recipe-name {
+  border-bottom: 1px solid rgba(0,0,0,0.16);
+  color: #222;
+}
+
+.recipe-list {
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+  list-style-type: none;
+  padding-left: 0;
+  font-size: 12px;
 }
 
 .no-recipes,
@@ -110,16 +142,22 @@ h1, h3, h4, button{
 }
 
 .recipe-list-item {
-  display: block
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+  border-radius: 1px;
+  position: relative;
 }
 
 .recipe-effect {
-  margin: 0 5px;
+
 }
 
 .recipe-ingredients {
-  grid-column: 1/2;
-  padding-left: 20px;
+  padding-left: 0;
+  color: #757575;
+}
+
+.recipe-ingredient {
+  list-style-type: none;
 }
 
 .reset-filters {

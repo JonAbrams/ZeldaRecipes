@@ -88,7 +88,7 @@ function FilterChooser({ state, setState, subSpace }) {
       </div>
       <div className="effects">
         <div className="filter-label-section">
-          <label>Effects</label>
+          <label>Effects @</label>
           <div className="select-deselect-container">
             <button onClick={subSpace("effects").setState(selectAll)} href="#">
               Select All
