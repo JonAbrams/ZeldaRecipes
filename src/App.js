@@ -28,7 +28,7 @@ function App({ state, subSpace, setState }) {
       <div className="footer">
         Created by <a href="https://twitter.com/JonathanAbrams">
           Jon Abrams
-        </a>{" "}
+        </a> and <a href="http://twitter.com/z1v1">Zivi Weinstock</a>{' '}
         to demo <a href="https://github.com/JonAbrams/spaceace">Space Ace</a>
       </div>
     </div>
