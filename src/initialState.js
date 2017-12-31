@@ -1,12 +1,12 @@
-import { recipes } from "./data";
+import { recipes } from './data';
 
 export function getInitialState() {
   const ingredients = {};
-  const effects = { "No Effect": true };
+  const effects = { 'No Effect': true };
   recipes.forEach(recipe => {
     Object.keys(recipe.ingredients).forEach(ingredientStr =>
       ingredientStr
-        .split("|")
+        .split('|')
         .forEach(ingredient => (ingredients[ingredient] = true))
     );
     if (recipe.effect) effects[recipe.effect] = true;
@@ -14,13 +14,13 @@ export function getInitialState() {
 
   return {
     favourites: [],
-    filters: { search: "", favouritesOnly: false, ingredients, effects },
+    filters: { search: '', favouritesOnly: false, ingredients, effects },
     recipes: recipes.map(
       // list of names
       recipe => {
         recipe.id = recipe.name;
         return recipe;
       }
-    )
+    ),
   };
 }

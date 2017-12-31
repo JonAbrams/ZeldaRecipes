@@ -1,14 +1,14 @@
-import React from "react";
+import React from 'react';
 
 function setIngredient({ state }, { target: { name: ingredient } }) {
   return {
-    [ingredient]: !state[ingredient]
+    [ingredient]: !state[ingredient],
   };
 }
 
 function setEffect({ state }, { target: { name: effect } }) {
   return {
-    [effect]: !state[effect]
+    [effect]: !state[effect],
   };
 }
 
@@ -34,9 +34,9 @@ function deselectAll({ state }, event) {
   return deselected;
 }
 
-function toggleFavouritesOnly({ state }, e) {
+function toggleFavouritesOnly({ state }) {
   return {
-    favouritesOnly: !state.favouritesOnly
+    favouritesOnly: !state.favouritesOnly,
   };
 }
 
@@ -58,14 +58,14 @@ function FilterChooser({ state, setState, subSpace }) {
           <h4>Ingredients *</h4>
           <div className="select-deselect-container">
             <button
-              onClick={subSpace("ingredients").setState(selectAll)}
+              onClick={subSpace('ingredients').setState(selectAll)}
               href="#"
             >
               Select All
             </button>
             <span className="select-separator">–</span>
             <button
-              onClick={subSpace("ingredients").setState(deselectAll)}
+              onClick={subSpace('ingredients').setState(deselectAll)}
               href="#"
             >
               Deselect All
@@ -79,7 +79,7 @@ function FilterChooser({ state, setState, subSpace }) {
                 type="checkbox"
                 name={ingredient}
                 checked={state.ingredients[ingredient]}
-                onChange={subSpace("ingredients").setState(setIngredient)}
+                onChange={subSpace('ingredients').setState(setIngredient)}
               />
               {ingredient}
             </label>
@@ -90,12 +90,12 @@ function FilterChooser({ state, setState, subSpace }) {
         <div className="filter-label-section">
           <label>Effects @</label>
           <div className="select-deselect-container">
-            <button onClick={subSpace("effects").setState(selectAll)} href="#">
+            <button onClick={subSpace('effects').setState(selectAll)} href="#">
               Select All
             </button>
             <span className="select-separator">–</span>
             <button
-              onClick={subSpace("effects").setState(deselectAll)}
+              onClick={subSpace('effects').setState(deselectAll)}
               href="#"
             >
               Deselect All
@@ -109,7 +109,7 @@ function FilterChooser({ state, setState, subSpace }) {
                 type="checkbox"
                 name={effect}
                 checked={state.effects[effect]}
-                onChange={subSpace("effects").setState(setEffect)}
+                onChange={subSpace('effects').setState(setEffect)}
               />
               {effect}
             </label>

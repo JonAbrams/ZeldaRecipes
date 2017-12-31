@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 function unFavourite(space, event) {
   event.preventDefault();
@@ -17,7 +17,7 @@ function FavouriteList({ state: recipes, subSpace }) {
           ))}
         </ul>
       ) : (
-        <div>You haven't favourited any recipes.</div>
+        <div>You haven&apos;t favourited any recipes.</div>
       )}
     </div>
   );
@@ -27,7 +27,7 @@ function FavouriteRecipe({ state: recipe, setState }) {
   return (
     <li className="favourite-recipe">
       <button className="recipe-remove" onClick={setState(unFavourite)}>
-      <div className="recipe-name">{recipe.name}</div>
+        <div className="recipe-name">{recipe.name}</div>
         &times;
       </button>
     </li>

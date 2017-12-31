@@ -1,5 +1,5 @@
-import React from "react";
-import Recipe from "./Recipe";
+import React from 'react';
+import Recipe from './Recipe';
 
 function filterRecipes(recipes, filters) {
   return recipes
@@ -19,10 +19,10 @@ function filterRecipes(recipes, filters) {
       return (
         Object.keys(recipe.ingredients).some(ingredient =>
           ingredient
-            .split("|")
+            .split('|')
             .some(ingredient => filters.ingredients[ingredient])
         ) &&
-        ((recipe.effect === null && filters.effects["No Effect"]) ||
+        ((recipe.effect === null && filters.effects['No Effect']) ||
           filters.effects[recipe.effect])
       );
     })
