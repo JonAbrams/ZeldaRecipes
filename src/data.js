@@ -7,7 +7,8 @@ export const recipes = [
       Voltfruits: 1,
       "Fresh Milk": 1
     },
-    effect: null
+    effect: null,
+    imagePath: "/images/Creamy Heart Soup.jpeg"
   },
   {
     name: "Pumpkin Stew",
@@ -17,7 +18,8 @@ export const recipes = [
       "Fresh Milk": 1,
       Wheat: 1
     },
-    effect: "Defence"
+    effect: "Defence",
+    imagePath: "/images/Pumpkin Stew.jpeg"
   },
   {
     name: "Veggie Cream Soup",
@@ -26,7 +28,8 @@ export const recipes = [
       "Fresh Milk": 1,
       "Rock Salt": 1
     },
-    effect: "Stamina"
+    effect: "Stamina",
+    imagePath: "/images/Veggie Cream Soup.jpeg"
   },
   {
     name: "Cream of Mushroom Soup",
@@ -36,21 +39,24 @@ export const recipes = [
       "Fresh Milk": 1,
       "Rock Salt": 1
     },
-    effect: null
+    effect: null,
+    imagePath: "/images/Cream of Mushroom Soup.jpeg"
   },
   {
     name: "Mushroom Skewer",
     ingredients: {
       Mushrooms: 1
     },
-    effect: null
+    effect: null,
+    imagePath: "/images/Mushroom Skewer.jpeg"
   },
   {
-    name: "Copious Mushroom Skewer",
+    name: "Copious Mushroom Skewers",
     ingredients: {
       Mushrooms: 4
     },
-    effect: null
+    effect: null,
+    imagePath: "/images/Copious Mushroom Skewers.jpeg"
   },
   {
     name: "Cream of Vegetable Soup",
@@ -59,7 +65,8 @@ export const recipes = [
       "Fresh Milk": 1,
       "Rock Salt": 1
     },
-    effect: null
+    effect: null,
+    imagePath: "/images/Cream of Vegetable Soup.jpeg"
   },
   {
     name: "Carrot Stew",
@@ -69,7 +76,8 @@ export const recipes = [
       "Fresh Milk": 1,
       Wheat: 1
     },
-    effect: "Stamina"
+    effect: "Stamina",
+    imagePath: "/images/Carrot Stew.jpeg"
   },
   {
     name: "Vegetable Risotto",
@@ -79,7 +87,8 @@ export const recipes = [
       "Hylian Rice": 1,
       "Rock Salt": 1
     },
-    effect: "Stamina"
+    effect: "Stamina",
+    imagePath: "/images/Vegetable Risotto.jpeg"
   },
   {
     name: "Mushroom Risotto",
@@ -89,7 +98,8 @@ export const recipes = [
       "Goat Butter": 1,
       "Rock Salt": 1
     },
-    effect: null
+    effect: null,
+    imagePath: "/images/Mushroom Risotto.jpeg"
   },
   {
     name: "Curry Pilaf",
@@ -98,7 +108,8 @@ export const recipes = [
       "Goron Spice": 1,
       "Hylian Rice": 1
     },
-    effect: null
+    effect: null,
+    imagePath: "/images/Curry Pilaf.jpeg"
   },
   {
     name: "Mushroom Rice Balls",
@@ -106,7 +117,8 @@ export const recipes = [
       "Hylian Rice": 1,
       Mushrooms: 1
     },
-    effect: null
+    effect: null,
+    imagePath: "/images/Mushroom Rice Balls.jpeg"
   },
   {
     name: "Veggie Rice Balls",
@@ -114,7 +126,8 @@ export const recipes = [
       "Hylian Rice": 1,
       "Vegetables|Herbs|Flowers": 1
     },
-    effect: null
+    effect: null,
+    imagePath: "/images/Veggie Rice Balls.jpeg"
   },
   {
     name: "Curry Rice",
@@ -122,7 +135,8 @@ export const recipes = [
       "Goron Spice": 1,
       "Hylian Rice": 1
     },
-    effect: null
+    effect: null,
+    imagePath: "/images/Curry Rice.jpeg"
   },
   {
     name: "Fried Egg and Rice",
@@ -130,7 +144,8 @@ export const recipes = [
       "Bird Egg": 1,
       "Hylian Rice": 1
     },
-    effect: null
+    effect: null,
+    imagePath: "/images/Fried Egg and Rice.jpeg"
   },
   {
     name: "Mushroom Omelet",
@@ -140,7 +155,8 @@ export const recipes = [
       "Goat Butter": 1,
       "Rock Salt": 1
     },
-    effect: null
+    effect: null,
+    imagePath: "/images/Mushroom Omelet.jpeg"
   },
   {
     name: "Vegetable Omelet",
@@ -150,7 +166,8 @@ export const recipes = [
       "Goat Butter": 1,
       "Rock Salt": 1
     },
-    effect: null
+    effect: null,
+    imagePath: "/images/Vegetable Omelet.jpeg"
   },
   {
     name: "Vegetable Curry",
@@ -159,7 +176,8 @@ export const recipes = [
       "Goron Spice": 1,
       "Hylian Rice": 1
     },
-    effect: "Stamina"
+    effect: "Stamina",
+    imagePath: "/images/Vegetable Curry.jpeg"
   },
   {
     name: "Fragrant Mushroom Sauté",
@@ -167,7 +185,8 @@ export const recipes = [
       Mushrooms: 1,
       "Goron Spice": 1
     },
-    effect: null
+    effect: null,
+    imagePath: "/images/Fragrant Mushroom Sauté.jpeg"
   },
   {
     name: "Herb Sauté",
@@ -175,7 +194,8 @@ export const recipes = [
       "Vegetables|Herbs|Flowers": 1,
       "Goron Spice": 1
     },
-    effect: null
+    effect: null,
+    imagePath: "/images/Herb Sauté.jpeg"
   },
   {
     name: "Salt-Grilled Greens",
@@ -183,7 +203,8 @@ export const recipes = [
       "Vegetables|Herbs|Flowers": 1,
       "Rock Salt": 1
     },
-    effect: null
+    effect: null,
+    imagePath: "/images/Salt-Grilled Greens.jpeg"
   },
   {
     name: "Salt-Grilled Mushrooms",
@@ -191,36 +212,41 @@ export const recipes = [
       Mushrooms: 1,
       "Rock Salt": 1
     },
-    effect: null
+    effect: null,
+    imagePath: "/images/Salt-Grilled Mushrooms.jpeg"
   },
   {
-    name: "Steamed Mushrooms",
+    name: "Steam Mushrooms",
     ingredients: {
       "Vegetables|Herbs|Flowers": 1,
       Mushrooms: 1
     },
-    effect: null
+    effect: null,
+    imagePath: "/images/Steam Mushrooms.jpeg"
   },
   {
     name: "Fried Wild Greens",
     ingredients: {
       "Vegetables|Herbs|Flowers": 2
     },
-    effect: null
+    effect: null,
+    imagePath: "/images/Fried Wild Greens.jpeg"
   },
   {
     name: "Copious Fried Wild Greens",
     ingredients: {
       "Vegetables|Herbs|Flowers": 4
     },
-    effect: "Stamina"
+    effect: "Stamina",
+    imagePath: "/images/Copious Fried Wild Greens.jpeg"
   },
   {
     name: "Omelet",
     ingredients: {
       "Bird Egg": 1
     },
-    effect: null
+    effect: null,
+    imagePath: "/images/Omelet.jpeg"
   },
   {
     name: "Clam Chowder",
@@ -230,7 +256,8 @@ export const recipes = [
       "Fresh Milk": 1,
       Wheat: 1
     },
-    effect: "Bonus Hearts"
+    effect: "Bonus Hearts",
+    imagePath: "/images/Clam Chowder.jpeg"
   },
   {
     name: "Creamy Seafood Soup",
@@ -240,7 +267,8 @@ export const recipes = [
       "Rock Salt": 1,
       "Fresh Milk": 1
     },
-    effect: "Stamina"
+    effect: "Stamina",
+    imagePath: "/images/Creamy Seafood Soup.jpeg"
   },
   {
     name: "Seafood Curry",
@@ -249,7 +277,8 @@ export const recipes = [
       "Hylian Rice": 1,
       "Goron Spice": 1
     },
-    effect: "Attack"
+    effect: "Attack",
+    imagePath: "/images/Seafood Curry.jpeg"
   },
   {
     name: "Salmon Risotto",
@@ -259,7 +288,8 @@ export const recipes = [
       "Hylian Rice": 1,
       "Goat Butter": 1
     },
-    effect: "Bonus Hearts"
+    effect: "Bonus Hearts",
+    imagePath: "/images/Salmon Risotto.jpeg"
   },
   {
     name: "Crab Risotto",
@@ -269,7 +299,8 @@ export const recipes = [
       "Hylian Rice": 1,
       "Goat Butter": 1
     },
-    effect: "Defence"
+    effect: "Defence",
+    imagePath: "/images/Crab Risotto.jpeg"
   },
   {
     name: "Seafood Fried Rice",
@@ -278,7 +309,8 @@ export const recipes = [
       "Rock Salt": 1,
       "Hylian Rice": 1
     },
-    effect: "Defence"
+    effect: "Defence",
+    imagePath: "/images/Seafood Fried Rice.jpeg"
   },
   {
     name: "Seafood Paella",
@@ -289,7 +321,8 @@ export const recipes = [
       "Goat Butter": 1,
       "Hylian Rice": 1
     },
-    effect: null
+    effect: null,
+    imagePath: "/images/Seafood Paella.jpeg"
   },
   {
     name: "Crab Omelet with Rice",
@@ -299,7 +332,8 @@ export const recipes = [
       "Hylian Rice": 1,
       "Bird Egg": 1
     },
-    effect: "Defence"
+    effect: "Defence",
+    imagePath: "/images/Crab Omelet with Rice.jpeg"
   },
   {
     name: "Seafood Rice Balls",
@@ -307,7 +341,8 @@ export const recipes = [
       Fish: 1,
       "Hylian Rice": 1
     },
-    effect: null
+    effect: null,
+    imagePath: "/images/Seafood Rice Balls.jpeg"
   },
   {
     name: "Fish Pie",
@@ -317,7 +352,8 @@ export const recipes = [
       Wheat: 1,
       "Goat Butter": 1
     },
-    effect: null
+    effect: null,
+    imagePath: "/images/Fish Pie.jpeg"
   },
   {
     name: "Salmon Meuniere",
@@ -326,7 +362,8 @@ export const recipes = [
       Wheat: 1,
       "Goat Butter": 1
     },
-    effect: "Bonus Hearts"
+    effect: "Bonus Hearts",
+    imagePath: "/images/Salmon Meuniere.jpeg"
   },
   {
     name: "Porgy Meuniere",
@@ -335,7 +372,8 @@ export const recipes = [
       Wheat: 1,
       "Goat Butter": 1
     },
-    effect: "Attack"
+    effect: "Attack",
+    imagePath: "/images/Porgy Meuniere.jpeg"
   },
   {
     name: "Seafood Meuniere",
@@ -343,7 +381,8 @@ export const recipes = [
       Seafood: 1,
       Wheat: 1
     },
-    effect: null
+    effect: null,
+    imagePath: "/images/Seafood Meuniere.jpeg"
   },
   {
     name: "Glazed Seafood",
@@ -351,7 +390,8 @@ export const recipes = [
       "Courser Bee Honey": 1,
       Seafood: 1
     },
-    effect: "Stamina"
+    effect: "Stamina",
+    imagePath: "/images/Glazed Seafood.jpeg"
   },
   {
     name: "Crab Stir-Fry",
@@ -359,7 +399,8 @@ export const recipes = [
       Crab: 1,
       "Goron Spice": 1
     },
-    effect: "Attack"
+    effect: "Attack",
+    imagePath: "/images/Crab Stir-Fry.jpeg"
   },
   {
     name: "Salt-Grilled Crab",
@@ -367,7 +408,8 @@ export const recipes = [
       Crab: 1,
       "Rock Salt": 1
     },
-    effect: "Defence"
+    effect: "Defence",
+    imagePath: "/images/Salt-Grilled Crab.jpeg"
   },
   {
     name: "Salt-Grilled Fish",
@@ -375,14 +417,16 @@ export const recipes = [
       Fish: 1,
       "Rock Salt": 1
     },
-    effect: null
+    effect: null,
+    imagePath: "/images/Salt-Grilled Fish.jpeg"
   },
   {
     name: "Copious Fish Skewers",
     ingredients: {
       Fish: 4
     },
-    effect: null
+    effect: null,
+    imagePath: "/images/Copious Fish Skewers.jpeg"
   },
   {
     name: "Spicy Peppered Seafood",
@@ -390,7 +434,8 @@ export const recipes = [
       Seafood: 1,
       "Spicy Pepper": 1
     },
-    effect: "Cold Resist"
+    effect: "Cold Resist",
+    imagePath: "/images/Spicy Peppered Seafood.jpeg"
   },
   {
     name: "Steamed Fish",
@@ -398,7 +443,8 @@ export const recipes = [
       "Herbs|Vegetables|Flowers": 1,
       Fish: 1
     },
-    effect: null
+    effect: null,
+    imagePath: "/images/Steamed Fish.jpeg"
   },
   {
     name: "Fish and Mushroom Skewer",
@@ -406,7 +452,8 @@ export const recipes = [
       Fish: 1,
       Mushrooms: 1
     },
-    effect: null
+    effect: null,
+    imagePath: "/images/Fish and Mushroom Skewer.jpeg"
   },
   {
     name: "Seafood Skewer",
@@ -414,13 +461,15 @@ export const recipes = [
       Crab: 1,
       Snail: 1
     },
-    effect: "Stealth"
+    effect: "Stealth",
+    imagePath: "/images/Seafood Skewer.jpeg"
   },
   {
     name: "Fish Skewer",
     ingredients: {
       Fish: 1
     },
-    effect: null
+    effect: null,
+    imagePath: "/images/Fish Skewer.jpeg"
   }
 ];

@@ -46,7 +46,7 @@ function RecipeList({ state: recipes, subSpace, filters, resetFilters }) {
   ) : (
     <ul className="recipe-list">
       {filteredRecipes.map(recipe => (
-        <li key={recipe.id}>
+        <li className="recipe-list-item" key={recipe.id}>
           <Recipe {...subSpace(recipe.id)} />
         </li>
       ))}

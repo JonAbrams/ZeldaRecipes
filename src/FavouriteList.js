@@ -25,9 +25,9 @@ function FavouriteList({ state: recipes, subSpace }) {
 
 function FavouriteRecipe({ state: recipe, setState }) {
   return (
-    <li>
-      <div className="recipe-name">{recipe.name}</div>
+    <li className="favourite-recipe">
       <button className="recipe-remove" onClick={setState(unFavourite)}>
+      <div className="recipe-name">{recipe.name}</div>
         &times;
       </button>
     </li>

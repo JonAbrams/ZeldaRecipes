@@ -26,22 +26,25 @@ function Recipe({ state: recipe, setState }) {
 
   return (
     <div className="recipe">
-      <div className="recipe-name">
-        {recipe.name}
-        {recipe.effect && (
-          <span className="recipe-effect">(+ {recipe.effect})</span>
-        )}
-        <button
+      <img className="recipe-img" src={recipe.imagePath} />
+      <div className="recipe-head">
+        <button className="favourite-button"
           onClick={setState(toggleFavourite)}
           title={"Click to " + favouriteText}
         >
           {recipe.favourite ? "★" : "☆"}
         </button>
-      </div>
+        {recipe.effect && (
+          <div className="recipe-effect">(+ {recipe.effect})</div>
+        )}
+        <div className="recipe-name">
+          {recipe.name}
+        </div>
+       </div>
       <ul className="recipe-ingredients">
         {Object.keys(recipe.ingredients).map(ingredient => (
-          <li key={ingredient}>
-            {recipe.ingredients[ingredient]} x {renderIngredient(ingredient)}
+          <li className="recipe-ingredient" key={ingredient}>
+            {recipe.ingredients[ingredient]}  {renderIngredient(ingredient)}
           </li>
         ))}
       </ul>
