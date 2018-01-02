@@ -3,6 +3,11 @@ import { recipes } from './data';
 export function getInitialState() {
   const ingredients = {};
   const effects = { 'No Effect': true };
+
+  if (localStorage.getItem('state')) {
+    return JSON.parse(localStorage.getItem('state'));
+  }  
+  
   recipes.forEach(recipe => {
     Object.keys(recipe.ingredients).forEach(ingredientStr =>
       ingredientStr
