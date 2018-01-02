@@ -11,5 +11,6 @@ const rootSpace = new Space(getInitialState());
 rootSpace.subscribe(causedBy => {
   // eslint-disable-next-line no-console
   console.log('Change caused by', causedBy, 'new state', rootSpace.state);
+  localStorage.setItem('state', JSON.stringify(rootSpace.state));
   ReactDOM.render(<App {...rootSpace} />, document.getElementById('root'));
 });
