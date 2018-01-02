@@ -34,12 +34,6 @@ function deselectAll({ state }, event) {
   return deselected;
 }
 
-function toggleFavouritesOnly({ state }) {
-  return {
-    favouritesOnly: !state.favouritesOnly,
-  };
-}
-
 function FilterChooser({ state, setState, subSpace }) {
   const ingredients = Object.keys(state.ingredients);
   const effects = Object.keys(state.effects);
@@ -116,15 +110,6 @@ function FilterChooser({ state, setState, subSpace }) {
           ))}
         </div>
       </div>
-      <label className="filter-favourite">
-        <input
-          type="checkbox"
-          name="favouritesOnly"
-          checked={state.favouritesOnly}
-          onChange={setState(toggleFavouritesOnly)}
-        />
-        Favourites Only
-      </label>
     </div>
   );
 }

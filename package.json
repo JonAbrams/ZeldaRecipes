@@ -4,13 +4,12 @@
   "private": true,
   "homepage": "https://jonabrams.github.io/ZeldaRecipes",
   "dependencies": {
-    "babel-eslint": "^8.1.2",
-    "eslint": "^4.14.0",
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-prettier": "^2.4.0",
+    "classnames": "^2.2.5",
     "gh-pages": "^1.0.0",
+    "lodash": "^4.17.4",
     "prettier": "^1.9.2",
     "react": "^15.6.1",
+    "react-addons-css-transition-group": "^15.6.2",
     "react-dom": "^15.6.1",
     "react-scripts": "1.0.10",
     "spaceace": "^0.9.23",
@@ -27,5 +26,11 @@
   "prettier": {
     "singleQuote": true,
     "trailingComma": "es5"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.1.2",
+    "eslint": "^4.14.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.4.0"
   }
 }

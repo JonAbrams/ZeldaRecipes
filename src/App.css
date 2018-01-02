@@ -1,13 +1,22 @@
 @font-face {
-  font-family: "triforce";
-  src: url("fonts/Triforce.ttf") format("truetype"),
-    url("fonts/Triforce.woff") format("woff");
+  font-family: 'triforce';
+  src: url('fonts/Triforce.ttf') format('truetype'),
+    url('fonts/Triforce.woff') format('woff');
 }
 
 #root {
   margin: auto;
   max-width: 768px;
 }
+
+.hide {
+  /* Can't use display: none due to animations */
+  height: 0 !important;
+  opacity: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
 .App {
   box-sizing: border-box;
   padding: 0 10px;
@@ -16,8 +25,11 @@
   grid-template-rows: 100px 1fr auto 50px;
 }
 
-h1, h3, h4, button{
-  font-family: "triforce", Arial, Helvetica, sans-serif;
+h1,
+h3,
+h4,
+button {
+  font-family: 'triforce', Arial, Helvetica, sans-serif;
 }
 
 .app-wrapper {
@@ -47,7 +59,8 @@ h1, h3, h4, button{
 .filter-chooser {
   display: inline-grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 30px auto 50px;
+  grid-template-rows: 30px auto;
+  margin-bottom: 20px;
 }
 
 .filter-search {
@@ -75,7 +88,7 @@ h1, h3, h4, button{
   display: block;
   font-weight: bold;
   padding-bottom: 25px;
-  font-family: "triforce", Arial, Helvetica, sans-serif;
+  font-family: 'triforce', Arial, Helvetica, sans-serif;
 }
 
 .filter-inputs {
@@ -106,17 +119,19 @@ h1, h3, h4, button{
   position: absolute;
   top: 98px;
   opacity: 0.4;
+  cursor: pointer;
 }
 
-.favourite-button:hover {
-  cursor: pointer;
+.subtitle {
+  margin: 0;
 }
 
 .recipe-img {
   width: 100%;
 }
 
-.recipe-name, .recipe-effect {
+.recipe-name,
+.recipe-effect {
   color: #222;
   margin: 10px;
 }
@@ -128,6 +143,19 @@ h1, h3, h4, button{
   list-style-type: none;
   padding-left: 0;
   font-size: 12px;
+  width: 100%;
+}
+
+.favourites {
+  border-bottom: solid 1px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.favourites.empty {
+  border-bottom: none;
+  margin: 0;
+  padding: 0;
 }
 
 .no-recipes,
@@ -136,7 +164,7 @@ h1, h3, h4, button{
 }
 
 .recipe-list-item {
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
   border-radius: 1px;
   position: relative;
 }
@@ -149,6 +177,24 @@ h1, h3, h4, button{
 .recipe-ingredient {
   list-style-type: none;
   line-height: 20px;
+}
+
+.recipe-enter {
+  opacity: 0.01;
+}
+
+.recipe-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.recipe-leave {
+  opacity: 1;
+}
+
+.recipe-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
 }
 
 .reset-filters {
