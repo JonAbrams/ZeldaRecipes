@@ -204,3 +204,43 @@ button {
 .footer {
   margin: 10px 0;
 }
+
+
+@media only screen and (max-width: 480px) {
+
+  .App {
+    grid-template-rows: 150px 1fr auto 50px;
+  }
+
+  .app-title {
+    width: 300px;
+  }
+
+  .fork-promo {
+    display: none;
+  }
+
+  .filter-chooser {
+    grid-template-columns: auto;
+    grid-template-rows: 30px auto auto;
+    max-width: 325px;
+    min-width: 300px;
+  }
+
+  .filter-search {
+    max-width: 325px;
+    min-width: 300px;
+  }
+
+  .favourite-button {
+    top: 51px;
+  }
+
+  .recipe-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .effects {
+    grid-column: 1/-1
+  }
+}

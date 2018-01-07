@@ -16,7 +16,7 @@ function resetFilters(space, event) {
 function App({ state, subSpace, setState }) {
   return (
     <div className="App">
-      <h1>Zelda: Breath of the Wild – Recipe Browser %</h1>
+      <h1 className="app-title">Zelda: Breath of the Wild – Recipe Browser %</h1>
       <FilterChooser {...subSpace('filters')} />
       <RecipeList
         {...subSpace('recipes')}
