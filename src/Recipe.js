@@ -26,8 +26,8 @@ function Recipe({ state: recipe, setState }) {
 
   return (
     <div className="recipe">
-      <img className="recipe-img" src={recipe.imagePath} />
-      <div className="recipe-head">
+      <div className="recipe-img-container">
+        <img className="recipe-img" src={recipe.imagePath} />
         <button
           className="favourite-button"
           onClick={setState(toggleFavourite)}
@@ -35,6 +35,8 @@ function Recipe({ state: recipe, setState }) {
         >
           {recipe.favourite ? '★' : '☆'}
         </button>
+      </div>
+      <div className="recipe-title">
         {recipe.effect && (
           <div className="recipe-effect">(+ {recipe.effect})</div>
         )}
